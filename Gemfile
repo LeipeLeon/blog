@@ -36,3 +36,5 @@ group :bridgetown_plugins do
   gem "bridgetown-lit-renderer", "= 2.0.0.beta3"
   gem "bridgetown-feed", "~> 2.1"
 end
+
+gem "standard"
