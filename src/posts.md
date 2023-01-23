@@ -1,18 +1,32 @@
 ---
 layout: page
 title: Posts
+paginate:
+  collection: posts
 ---
 
 <ul>
-<<<<<<< HEAD
-  {% for post in collections.posts.resources %}
-=======
-  {% collections.posts.resources.each do |post| %}
->>>>>>> deebc40 (-c turbo,ruby2js,shoelace,lit,bt-postcss,render)
+  {% for post in paginator.resources %}
     <li>
-      <a href="{{ post.relative_url }}">{{ post.data.title }}</a>
+      <a href="{{ post.relative_url }}">{{ post.data.date | date: "%Y-%m-%d" }} {{ post.data.title }}</a>
+      {% for category in post.data.categories %}
+        {{ category }}
+      {% endfor %}
     </li>
-  {% end %}
+  {% endfor %}
 </ul>
 
-If you have a lot of posts, you may want to consider adding [pagination](https://www.bridgetownrb.com/docs/content/pagination)!
+{% if paginator.total_pages > 1 %}
+  <ul class="pagination">
+    {% if paginator.previous_page %}
+    <li>
+      <a href="{{ paginator.previous_page_path }}">Previous Page</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li>
+      <a href="{{ paginator.next_page_path }}">Next Page</a>
+    </li>
+    {% endif %}
+  </ul>
+{% endif %}

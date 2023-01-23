@@ -29,6 +29,6 @@ template_engine: liquid
 # If you're using esbuild for frontend assets, edit `esbuild.config.js` to
 # update `publicPath`.
 
-# timezone: America/Los_Angeles
-# pagination:
-#   enabled: true
+timezone: Europe/Amsterdam
+pagination:
+  enabled: true
