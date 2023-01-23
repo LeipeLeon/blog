@@ -1,3 +1,6 @@
+/* Import the base Shoelace stylesheet: */
+@import "@shoelace-style/shoelace/dist/themes/light.css";
+
 :root {
   --body-background: #f2f2f2;
   --body-color: #444;
