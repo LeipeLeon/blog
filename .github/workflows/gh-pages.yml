@@ -39,7 +39,7 @@ jobs:
       - run: yarn install
 
       - name: Build
-        run: bin/bridgetown deploy --destination ./_site
+        run: bin/bridgetown deploy
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
