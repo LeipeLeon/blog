@@ -4,6 +4,9 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
+    # paths-ignore:
+    #   - '.github/workflows/**'
+    #   - '**.md'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -59,3 +62,24 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Set short SHA, Commit Message and Ruby version to ENV
+        run: |
+          echo "COMMIT_SHORT_SHA=$(echo ${GITHUB_SHA} | cut -c1-8)" >> $GITHUB_ENV
+          echo "COMMIT_MESSAGE=$(git log --pretty=format:%s -n 1)" >> $GITHUB_ENV
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: production
+          SLACK_COLOR: ${{ needs.build.outputs.job-status }} # or a specific color like 'good' or '#ff00ff'
+          # SLACK_ICON: https://github.com/rtCamp.png?size=48
+          SLACK_ICON_EMOJI: ":octocat:"
+          SLACK_TITLE: Blog Deploy
+          SLACK_MESSAGE: "${{ env.COMMIT_MESSAGE }} - ${{github.event.pull_request.title}}"
+          SLACK_USERNAME: Github Action
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_FOOTER: "Status: ${{ needs.build.outputs.job-status }}"
