@@ -26,9 +26,15 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    outputs:
+      commit_message: ${{ steps.set_env.outputs.COMMIT_MESSAGE }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Set short SHA, Commit Message and Ruby version to ENV
+        id: set_env
+        run: |
+          echo "COMMIT_MESSAGE=$(git log --pretty=format:%s -n 1)" >> $GITHUB_OUTPUT
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -67,10 +73,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy
     steps:
-      - name: Set short SHA, Commit Message and Ruby version to ENV
-        run: |
-          echo "COMMIT_SHORT_SHA=$(echo ${GITHUB_SHA} | cut -c1-8)" >> $GITHUB_ENV
-          echo "COMMIT_MESSAGE=$(git log --pretty=format:%s -n 1)" >> $GITHUB_ENV
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
         env:
@@ -79,7 +81,7 @@ jobs:
           # SLACK_ICON: https://github.com/rtCamp.png?size=48
           SLACK_ICON_EMOJI: ":octocat:"
           SLACK_TITLE: Blog Deploy
-          SLACK_MESSAGE: "${{ env.COMMIT_MESSAGE }} - ${{github.event.pull_request.title}}"
+          SLACK_MESSAGE: "${{ jobs.build.outputs.commit_message }} - ${{ github.event.head_commit.message }}"
           SLACK_USERNAME: Github Action
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_FOOTER: "Status: ${{ needs.deploy.result }}"
