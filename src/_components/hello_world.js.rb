@@ -1,5 +1,5 @@
 class HelloWorld < HTMLElement
-  def connected_callback()
+  def connected_callback
     self.inner_html = "<p><strong>Hello World!</strong></p>"
   end
 end
