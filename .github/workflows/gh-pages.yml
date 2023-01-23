@@ -75,11 +75,11 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         env:
           SLACK_CHANNEL: production
-          SLACK_COLOR: ${{ needs.build.outputs.job-status }} # or a specific color like 'good' or '#ff00ff'
+          SLACK_COLOR: ${{ needs.deploy.result }} # or a specific color like 'good' or '#ff00ff'
           # SLACK_ICON: https://github.com/rtCamp.png?size=48
           SLACK_ICON_EMOJI: ":octocat:"
           SLACK_TITLE: Blog Deploy
           SLACK_MESSAGE: "${{ env.COMMIT_MESSAGE }} - ${{github.event.pull_request.title}}"
           SLACK_USERNAME: Github Action
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_FOOTER: "Status: ${{ needs.build.outputs.job-status }}"
+          SLACK_FOOTER: "Status: ${{ needs.deploy.result }}"
