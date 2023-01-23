@@ -35,6 +35,7 @@ gem "puma", "~> 5.6"
 group :bridgetown_plugins do
   gem "bridgetown-lit-renderer", "= 2.0.0.beta3"
   gem "bridgetown-feed", "~> 2.1"
+  gem "bridgetown-sitemap", "~> 1.1"
 end
 
 gem "standard"

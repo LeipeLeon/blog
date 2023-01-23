@@ -17,8 +17,7 @@
 # https://learnxinyminutes.com/docs/yaml/
 #
 
-url: "" # the base hostname & protocol for your site, e.g. https://example.com
-
+url: "https://blog.wendbaar.nl" # the base hostname & protocol for your site, e.g. https://example.com
 permalink: pretty
 template_engine: liquid
 
@@ -33,3 +32,4 @@ timezone: Europe/Amsterdam
 pagination:
   enabled: true
 init: "bridgetown-feed"
+content_engine: "resource"
