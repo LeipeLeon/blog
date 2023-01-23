@@ -83,7 +83,7 @@ jobs:
           # SLACK_ICON: https://github.com/rtCamp.png?size=48
           SLACK_ICON_EMOJI: ":octocat:"
           SLACK_TITLE: Blog Deploy
-          SLACK_MESSAGE: "${{ needs.deploy.outputs.commit_message }} - ${{ github.event.head_commit.message }}"
+          SLACK_MESSAGE: "${{ github.event.head_commit.messageHeadline }} - ${{ github.event.head_commit.message }}"
           SLACK_USERNAME: Github Action
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_FOOTER: "Status: ${{ needs.deploy.result }}"
