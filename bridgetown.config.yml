@@ -32,3 +32,4 @@ template_engine: liquid
 timezone: Europe/Amsterdam
 pagination:
   enabled: true
+init: "bridgetown-feed"
