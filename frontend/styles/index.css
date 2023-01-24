@@ -90,3 +90,6 @@ article {
   border-bottom: 2px dotted #bbb;
   margin: 3rem 0;
 }
+sl-avatar {
+  --size: 6rem;
+}
