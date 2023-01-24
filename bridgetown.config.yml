@@ -17,7 +17,7 @@
 # https://learnxinyminutes.com/docs/yaml/
 #
 
-url: "https://blog.wendbaar.nl" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://www.wendbaar.nl" # the base hostname & protocol for your site, e.g. https://example.com
 permalink: pretty
 template_engine: liquid
 
