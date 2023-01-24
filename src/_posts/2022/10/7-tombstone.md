@@ -7,4 +7,4 @@ description: Put this up on my graveyard
 
 Sidenote: we're all doomed
 
-![](./tombstone.png)
+![](/2022/10/tombstone.png)

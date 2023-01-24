@@ -10,4 +10,4 @@ So we make it difficult to contact us:
 - for phone numbers you have to click first to show...
 
 
-![](./dont-call-us.png)
+![](/2022/10/dont-call-us.png)
