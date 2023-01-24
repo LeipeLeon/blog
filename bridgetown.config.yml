@@ -33,3 +33,7 @@ pagination:
   enabled: true
 init: "bridgetown-feed"
 content_engine: "resource"
+
+collections:
+  posts:
+    permalink:  /:year/:month/:day/:slug/
