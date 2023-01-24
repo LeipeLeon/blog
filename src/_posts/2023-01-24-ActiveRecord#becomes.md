@@ -2,7 +2,6 @@
 layout: post
 title:  "TIL: ActiveRecord#becomes"
 date:   2023-01-24 16:00:00 CES
-categories: TIL
 description: With `ActiveRecord#becomes` any model can become a different class instantly.
 ---
 

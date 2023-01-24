@@ -2,7 +2,6 @@
 layout: post
 title:  "TIL: Heredocs pretty print strings"
 date:   2023-01-23 10:24:12 CES
-categories: TIL
 description: Some text editors understand heredoc and pretty print the string depending on the heredoc flag.
 ---
 

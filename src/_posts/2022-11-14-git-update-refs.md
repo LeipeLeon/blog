@@ -2,7 +2,6 @@
 layout: post
 title:  "TIL: Git update-refs"
 date:   2022-11-14 12:01:00 CES
-categories: TIL
 description: "ICYM: When building Branch on Branch this is an very nice tool!"
 ---
 

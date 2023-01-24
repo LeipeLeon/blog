@@ -12,7 +12,6 @@ echo "---" > ${FILENAME}
 echo "layout: post" >> ${FILENAME}
 echo "title:  \"${@}\"" >> ${FILENAME}
 echo "date:   ${CURRENT_TIME}" >> ${FILENAME}
-echo "categories: TIL" >> ${FILENAME}
 echo "description: " >> ${FILENAME}
 echo "---" >> ${FILENAME}
 
