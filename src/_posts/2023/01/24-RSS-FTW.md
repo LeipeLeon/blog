@@ -6,9 +6,6 @@ description: "RSS FTW: “You can find us anywhere you get your podcasts.”"
 ---
 
 
-
-
-
 <https://aus.social/@attacus/109499740512576514>
 
 > “You can find us anywhere you get your podcasts.”
