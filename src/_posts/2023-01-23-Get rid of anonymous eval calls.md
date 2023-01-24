@@ -35,5 +35,5 @@ Traceback (most recent call last):
 foo.rb:5:in `foo': undefined method `abc' for 123:Integer (NoMethodError)
 ```
 
-See: https://stackoverflow.com/a/2496240/234171
-See: https://github.com/ruby/psych/commit/38871ad4e5e3b367256ac0a950b2ed7eb0335091 (edited)
+See: <https://stackoverflow.com/a/2496240/234171>
+See: <https://github.com/ruby/psych/commit/38871ad4e5e3b367256ac0a950b2ed7eb0335091>

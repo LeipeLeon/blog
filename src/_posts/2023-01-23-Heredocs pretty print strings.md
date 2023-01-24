@@ -9,4 +9,4 @@ description: Some text editors understand heredoc and pretty print the string de
 Some text editors understand heredoc and pretty print the string depending on the heredoc flag.
 Here is a list of common heredoc flags: `<<-RUBY`, `<<-SQL`, `<<-HTML`, `<<-XML`, `<<-JSON`
 
-See: https://medium.com/rubycademy/avoid-interpolation-in-heredoc-59a5d907133d
+See: <https://medium.com/rubycademy/avoid-interpolation-in-heredoc-59a5d907133d>
