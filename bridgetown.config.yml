@@ -36,4 +36,4 @@ content_engine: "resource"
 
 collections:
   posts:
-    permalink:  /posts/:year/:month/:day/:slug/
+    permalink:  /posts/:year/:month/:day/:slug.*
