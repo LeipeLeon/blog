@@ -20,6 +20,6 @@ This is my personal website w/ some ramblings and insights I'm encountering whil
 {% for post in collections.posts.resources %}
 <article >
   <a href="{{ post.relative_url }}"><h2>{{ post.data.title }}</h2></a>
-  <p>{{ post.data.description | truncate: 80 }}</p>
+  <p>{{ post.summary | strip_html | truncate: 80 }}</p>
 </article>
 {% endfor %}

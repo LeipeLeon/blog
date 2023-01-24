@@ -2,7 +2,6 @@
 layout: post
 title:  "TIL: cleanup temp files in shell commands w/ `trap`"
 date:   2022-11-05 16:53:00 CES
-description: "Be a good boyscout and clean up after yourself!"
 ---
 
 _Be a good boyscout and clean up after yourself!_

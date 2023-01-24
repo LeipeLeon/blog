@@ -2,7 +2,6 @@
 layout: post
 title:  "TIL: Get rid of anonymous eval calls"
 date:   2023-01-23 10:24:12 CES
-description: Things declared in anonymous eval are always annoying to locate
 ---
 
 While reviewing the [changelog of Psych](https://github.com/ruby/psych/compare/bdf20e604204024eae580fbd5f697e171e55ac2d...a170b8eb466f25d16c4ceb1451a75de1d2c8c0cc) I stumbled upon a commit: [**"Get rid of anonymous eval calls"**](https://github.com/ruby/psych/commit/38871ad4e5e3b367256ac0a950b2ed7eb0335091)
@@ -14,7 +13,7 @@ Checking the diff I saw some hackery which spiked my interests:
 + class_eval <<~RUBY, __FILE__, __LINE__ + 1
 ```
 
-After some investigation (e.g. searching [SO](https://stackoverflow.com/a/2496240/234171)) I found this explanation:
+This raised my eyebrows a bit and after some investigation (e.g. searching [SO](https://stackoverflow.com/a/2496240/234171)) I found this explanation:
 
 ```ruby
 # foo.rb

@@ -2,5 +2,6 @@
 layout: post
 title:  "TIL: http://strftime.net/"
 date:   2022-11-07 16:51:00 CES
-description:
 ---
+
+A nice tool for formatting times.

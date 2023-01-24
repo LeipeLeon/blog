@@ -2,9 +2,9 @@
 layout: post
 title:  RSS FTW
 date:   2023-01-24 16:31:00 CES
-description: "RSS FTW: “You can find us anywhere you get your podcasts.”"
 ---
 
+“You can find us anywhere you get your podcasts.”
 
 <https://aus.social/@attacus/109499740512576514>
 
