@@ -8,10 +8,10 @@ paginate:
 <ul>
   {% for post in paginator.resources %}
     <li>
-      <a href="{{ post.relative_url }}">{{ post.data.date | date: "%Y-%m-%d" }} {{ post.data.title }}</a>
-      {% for category in post.data.categories %}
-        {{ category }}
-      {% endfor %}
+      <article >
+        <a href="{{ post.relative_url }}">{{ post.data.date | date: "%Y-%m-%d" }} {{ post.data.title }}</a>
+        <p>{{ post.data.description | truncate: 80 }}</p>
+      </article>
     </li>
   {% endfor %}
 </ul>

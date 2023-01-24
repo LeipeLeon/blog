@@ -3,8 +3,9 @@ layout: page
 title: About
 ---
 
-This is the basic Bridgetown site template. You can find out more info about customizing your Bridgetown site, as well as basic Bridgetown usage documentation at [bridgetownrb.com](https://bridgetownrb.com/)
-
-You can find the source code for Bridgetown at GitHub:
-[bridgetownrb](https://github.com/bridgetownrb) /
-[bridgetown](https://github.com/bridgetownrb/bridgetown)
+| Contact Details |                                                                                               |
+| --------------: | --------------------------------------------------------------------------------------------- |
+|    **Location** | [Mr. H.F. de Boerlaan 151B <br/>7411 AH Deventer<br/>Netherlands](https://www.google.com/maps/place/Mr.+H.F.+de+Boerlaan+151B,+7411+AH+Deventer) |
+| **Phone** | [+31(0)630326921](tel:031630326921) |
+|         **KVK** | Apeldoorn 08081774                                                                            |
+|         **BTW** | NL100846348B02                                                                                |

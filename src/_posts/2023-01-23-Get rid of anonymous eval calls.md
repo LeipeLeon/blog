@@ -3,6 +3,7 @@ layout: post
 title:  "TIL: Get rid of anonymous eval calls"
 date:   2023-01-23 10:24:12 +0100
 categories: TIL
+description: Things declared in anonymous eval are always annoying to locate
 ---
 
 Things declared in anonymous eval are always annoying to locate,
