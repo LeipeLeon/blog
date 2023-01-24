@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+cd ~/Clients/wendbaar/blog/
+
+CURRENT_DATE=$(date "+%Y/%m-%d")
+CURRENT_TIME=$(date "+%Y-%m-%d %H:%M:00 CES")
+BASE_DIR="src/_posts"
+
+FILENAME="${BASE_DIR}/${CURRENT_DATE}.md"
+
+echo "---" > ${FILENAME}
+echo "layout: post" >> ${FILENAME}
+echo "title:  \"${@}\"" >> ${FILENAME}
+echo "date:   ${CURRENT_TIME}" >> ${FILENAME}
+echo "categories: TIL" >> ${FILENAME}
+echo "description: " >> ${FILENAME}
+echo "---" >> ${FILENAME}
+
+# Open t
+/usr/local/bin/stree .
+# open in VSCode
+/usr/local/bin/code ${BASE_DIR}
+/usr/local/bin/code ${FILENAME}
