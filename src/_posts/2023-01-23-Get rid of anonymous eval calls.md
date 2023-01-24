@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "TIL: Get rid of anonymous eval calls"
-date:   2023-01-23 10:24:12 +0100
+date:   2023-01-23 10:24:12 CES
 categories: TIL
 description: Things declared in anonymous eval are always annoying to locate
 ---
@@ -35,5 +35,6 @@ Traceback (most recent call last):
 foo.rb:5:in `foo': undefined method `abc' for 123:Integer (NoMethodError)
 ```
 
-See: <https://stackoverflow.com/a/2496240/234171>
-See: <https://github.com/ruby/psych/commit/38871ad4e5e3b367256ac0a950b2ed7eb0335091>
+## Refs
+H/T: <https://stackoverflow.com/a/2496240/234171>
+H/T: <https://github.com/ruby/psych/commit/38871ad4e5e3b367256ac0a950b2ed7eb0335091>
