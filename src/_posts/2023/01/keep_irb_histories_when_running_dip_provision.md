@@ -8,7 +8,9 @@ I'm a big fan of [`dip`, the Docker Interaction Program](https://github.com/bibe
 
 But everytime I'm running `dip provision` my bash/irb/psql history in shell and such get deleted.
 
-Therefore docker external volumes FTW. These volumes won't be destroyed by the `dip provision` command. The only caveat is that you name it properly b/c I've found no way to use the `COMPOSE_PROJECT_NAME` env var. (therefore I'm hardcoding it in the `dip.yml`)
+Therefore docker external volumes FTW. These volumes won't be destroyed by the `dip provision` command.
+
+The only caveat is when you use `COMPOSE_PROJECT_NAME` that you name it properly b/c I've found no way to use the env var in the yaml. (therefore I'm hardcoding it in the `dip.yml`)
 
 ```yaml
 # docker-compose.yml
