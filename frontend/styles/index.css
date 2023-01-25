@@ -93,3 +93,7 @@ article {
 sl-avatar {
   --size: 6rem;
 }
+
+img {
+  max-width: 100%;
+}
