@@ -23,7 +23,12 @@ The design is sparse b/c I'm a backender but there will be progress!
 
 {% for post in collections.posts.resources %}
 <article>
-  <a href="{{ post.relative_url }}"><h2>{{ post.data.title }}</h2></a>
+  <sl-badge variant="success" pill style="float: right;">
+    <sl-relative-time date="{{ post.data.date }}" month="long" day="numeric" year="numeric"></sl-relative-time>
+  </sl-badge>
+  <h2>
+    <a href="{{ post.relative_url }}">{{ post.data.title }}</a>
+  </h2>
   <p>{{ post.summary | strip_html | truncate: 80 }}</p>
 </article>
 {% endfor %}
