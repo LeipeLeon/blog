@@ -1,12 +1,25 @@
 #!/usr/bin/env bash
+CURRENT_PWD=$(pwd)
+trap "cd ${CURRENT_PWD}" 0 2 3 15
 
 cd ~/Clients/wendbaar/blog/
 
-CURRENT_DATE=$(date "+%Y/%m/%d")
+CURRENT_DATE=$(date "+%Y/%m")
 CURRENT_TIME=$(date "+%Y-%m-%d %H:%M:00 CES")
 BASE_DIR="src/_posts"
 
-FILENAME="${BASE_DIR}/${CURRENT_DATE}.md"
+LC_ALL=C
+
+# first, strip underscores
+CLEAN=${*//_/}
+# next, replace spaces with underscores
+CLEAN=${CLEAN// /_}
+# now, clean out anything that's not alphanumeric or an underscore
+CLEAN=${CLEAN//[^a-zA-Z0-9_]/}
+# finally, lowercase with TR
+CLEAN=`echo -n $CLEAN | tr A-Z a-z`
+
+FILENAME="${BASE_DIR}/${CURRENT_DATE}/${CLEAN}.md"
 
 echo "---" > ${FILENAME}
 echo "layout: post" >> ${FILENAME}
@@ -19,3 +32,5 @@ echo "---" >> ${FILENAME}
 # open in VSCode
 /usr/local/bin/code ${BASE_DIR}
 /usr/local/bin/code ${FILENAME}
+
+cd ${CURRENT_PWD}
