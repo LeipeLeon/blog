@@ -8,7 +8,7 @@ As stated in my post [Keeping histories in `dip provision`](/posts/2023/01/keep_
 
 > I've found no way to use the env var in the yaml. (therefore I'm hardcoding it in the `dip.yml`)
 
-Tehre is an temporary solution by leveraging ERB in yaml. This way we can load the `.env` (which is also used by docker compose itself) and use vars defined there in our dip configuration:
+There is an temporary solution by leveraging ERB in yaml. This way we can load the `.env` (which is also used by docker compose itself) and use vars defined there in our dip configuration:
 
 - By loading the `dotenv` gem inside the YAML
 - These snippets make sure that there is a default value (e.g. `api`)
