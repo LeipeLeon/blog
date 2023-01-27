@@ -25,6 +25,8 @@ concurrency:
 jobs:
   # Build job
   build:
+    env:
+      BRIDGETOWN_ENV: production
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
