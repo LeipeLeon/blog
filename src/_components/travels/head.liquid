@@ -3,7 +3,7 @@
 {% capture resource_title %}{{ title | strip_html | strip_newlines }}{% endcapture %}
 <title>{% if resource_title != "Index" %}{{ resource_title | escape }} | {{ metadata.title | escape }}{% else %}{{ metadata.title | escape }}: {{ metadata.tagline | escape }}{% endif %}</title>
 
-<meta name="description" content="{{ metadata.description }}" />
+<meta name="description" content="LeipeLeon's Travel Log" />
 
 <link rel="stylesheet" href="{% asset_path styles/travels.css %}" />
 {% live_reload_dev_js %}
