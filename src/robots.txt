@@ -1,0 +1,6 @@
+---
+---
+User-agent: *
+Disallow: /travels
+
+Sitemap: {{ "sitemap.xml" | absolute_url }}
