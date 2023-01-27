@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="{{ site.locale }}">
+  <head>
+    {% feed_meta %}
+    {% render "travels/head", metadata: site.metadata, title: resource.data.title %}
+  </head>
+  <body class="{{ resource.data.layout }} {{ resource.data.page_class }}">
+    <table
+      height="100%"
+      align="center"
+      border="0"
+      cellspacing="0"
+      cellpadding="0"
+      class="b_yellow"
+      width="700"
+    >
+      <tbody>
+        <tr>
+          <td
+            colspan="3"
+            width="700"
+            height="187"
+            valign="top"
+            class="img_head"
+            align="center"
+          >
+            <br /><br />
+            <font size="+3" class="red">
+              <img
+                src="/images/spacer.gif"
+                height="187"
+                width="1"
+                align="left"
+              />LeipeLeon Down Under</font>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <table
+              width="120"
+              align="center"
+              border="0"
+              cellspacing="0"
+              cellpadding="0"
+              class="yellow"
+            >
+              <tbody>
+                <tr>
+                  <td valign="top" width="120">
+                    <table
+                      width="100%"
+                      border="0"
+                      cellspacing="0"
+                      cellpadding="0"
+                      class="b_yellow red"
+                    >
+                      <tbody>
+                        <tr>
+                          <td class="b_blue yellow" align="center">
+                            <b>Mailing List:</b>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="b_yellow blue">
+                            <form
+                              name="mailingadd"
+                              action="/travels//mail.php"
+                              method="post"
+                              target="_blank"
+                              onsubmit="MM_validateForm('form_email','','RisEmail');return document.MM_returnValue"
+                            >
+                              naam:<br />
+                              <input
+                                type="text"
+                                size="20"
+                                maxlength="40"
+                                name="form_naam"
+                                value=""
+                              />
+                              <br />
+                              email:<br />
+                              <input
+                                type="text"
+                                size="20"
+                                maxlength="60"
+                                name="form_email"
+                                value=""
+                              />
+                              <br />
+                              <input
+                                type="radio"
+                                name="action"
+                                checked=""
+                                value="subscr"
+                              />
+                              Voeg me toe<br />
+                              <input type="radio" name="action" value="unsubs" />
+                              Verwijder me van lijst <br />
+                              <input type="submit" name="verzend" />
+                            </form>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="b_blue yellow" align="center"><b>Links:</b></td>
+                </tr>
+                <tr>
+                  <td class="b_yellow blue" align="right">
+                    Home
+                    <a href="/travels/" target="_self">--&gt;</a><br />
+                    Gereden Routes
+                    <a href="/travels/route" target="_self">--&gt;</a><br />
+                    FAQ
+                    <a href="/travels/faq" target="_self">--&gt;</a><br />
+                    Zones <a href="/travels/zones" target="_self">--&gt;</a><br />
+                    Foto's <a href="./foto/" target="_blank">--&gt;</a><br />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="b_blue yellow" align="center">
+                    <b>Wie zijn er online?</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="" align="center">
+                    1 gast(en)
+                    <a
+                      href="#"
+                      ><img
+                        src="/images/conf2.gif"
+                        border="0"
+                        alt="W.I.E."
+                    /></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="b_blue yellow" align="center">
+                    <img src="/images/spacer.gif" height="1" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="b_yellow blue" align="center">
+                    <!-- Begin PayPal Logo -->
+                    <!-- <a
+                      href="https://www.paypal.com/affil/pal=paypal%40beriedata.nl"
+                      target="_blank"
+                      ><img
+                        src="http://images.paypal.com/images/lgo/logo3.gif"
+                        border="0"
+                        alt="I accept payment through PayPal!, the #1 online payment service!"
+                    /></a> -->
+                    <!-- End PayPal Logo -->
+                  </td>
+                </tr>
+                <tr>
+                  <td class="b_blue yellow" align="center">
+                    <img src="/images/spacer.gif" height="1" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="b_yellow blue" align="center">
+                    <br />
+                    <a
+                      href="http://www.stor.co.uk/stortroopers_e.jsp"
+                      target="_blank"
+                      title="Klik hier om je eigen 'avatar' te maken"
+                      ><img
+                        src="/images/leonb.gif"
+                        alt="leonb.gif"
+                        width="61"
+                        height="115"
+                        border="0" /></a
+                    ><br /><br />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="b_blue yellow" align="center"><b>Archief:</b></td>
+                </tr>
+                <tr>
+                  <td class="b_yellow blue">
+                    <div class="small date">
+                      {% for item in collections.travels.resources %}
+                        <a
+                          href="{{ item.relative_url }}"
+                          target="_self"
+                          >{{ item.data.title }}</a
+                        ><br/>
+                      {% endfor %}
+
+                      {% if paginator.total_pages > 1 %}
+                        <ul class="pagination">
+                          {% if paginator.previous_page %}
+                          <li>
+                            <a href="{{ paginator.previous_page_path }}">Previous Page</a>
+                          </li>
+                          {% endif %}
+                          {% if paginator.next_page %}
+                          <li>
+                            <a href="{{ paginator.next_page_path }}">Next Page</a>
+                          </li>
+                          {% endif %}
+                        </ul>
+                      {% endif %}
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="b_blue yellow" align="center"><b>Reclame:</b></td>
+                </tr>
+                <tr>
+                  <td align="center" class="item">
+                    <br />
+                    <a href="http://www.blogger.com/" target="_blank"
+                      ><img
+                        src="http://buttons.blogger.com/bloggerbutton1.gif"
+                        width="88"
+                        height="31"
+                        border="0"
+                        alt="This page is powered by Blogger. Isn't yours?" /></a
+                    ><br />
+                    <br />
+                  </td>
+                </tr>
+                <!-- E Include(links) -->
+              </tbody>
+            </table>
+          </td>
+          <td class="b_blue" width="2">
+            <img src="/images/spacer.gif" width="2" height="5" />
+          </td>
+          <td class="red" width="578" valign="top">
+            {{ content}}
+          </td>
+        </tr>
+        <tr align="center">
+          <td class="b_blue yellow" colspan="3">
+            Hosted By
+            <a href="http://www.beriedata.nl/" target="_blank">BerieData.nl</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

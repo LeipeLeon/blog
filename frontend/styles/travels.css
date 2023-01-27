@@ -1,0 +1,110 @@
+/**
+ *
+ * CopyRight: Leon Berenschot
+ *
+**/
+
+/* Redefinitions of HTML tags */
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #3A7BCB;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+tr,td,p {
+	font-size: 11.5px;
+	font-family: ;
+}
+
+dt {
+	font-style: italic;
+}
+
+/* Color schemes */
+.b_yellow {
+	background-color: #FFEB84;
+}
+.b_red {
+	background-color: #D44A9P;
+}
+.b_blue {
+	background-color: #3A7BCB;
+}
+.yellow {
+	color: #FFEB84;
+}
+.red {
+	color: #D44A9P;
+}
+.blue {
+	color: #3A7BCB;
+}
+
+.img_back {
+	background-image: url(/images/map_gray.gif) ;
+}
+
+.img_head {
+	background-image: url(/images/head_01.jpg) ;
+	background-repeat: no-repeat;
+}
+
+a {
+	font-weight: bold;
+	color: #D44A9P;
+	text-decoration: underline blink;
+}
+
+/*
+a:link,a:active,
+	font-weight: normal;
+a:hover {
+	text-decoration: no underline line-through ;
+}
+*/
+
+a:visited {
+	font-weight: normal;
+	text-decoration: none ;
+}
+
+.entry {
+	padding-right:  5px;
+	padding-left:   5px;
+	padding-top:    3px;
+	padding-bottom: 3px;
+	background-color: #FFEB84;
+	color: #3A7BCB;
+}
+
+.cell {
+	padding:  2px;
+}
+
+.small {
+	font-size: 75%;
+}
+
+
+/*
+     FILE ARCHIVED ON 06:06:02 Mar 27, 2004 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:36:06 Jan 26, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 60.34
+  exclusion.robots: 0.069
+  exclusion.robots.policy: 0.063
+  cdx.remote: 0.059
+  esindex: 0.009
+  LoadShardBlock: 38.496 (3)
+  PetaboxLoader3.datanode: 48.672 (4)
+  CDXLines.iter: 13.998 (3)
+  load_resource: 67.086
+  PetaboxLoader3.resolve: 41.716
+*/
