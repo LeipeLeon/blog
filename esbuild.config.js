@@ -51,7 +51,14 @@ const esbuildOptions = {
       autoexports: "default",
       filters: ["camelCase", "functions", "lit", "esm", "return"]
     })
-  ]
+  ],
+  entryPoints: [
+    "frontend/styles/index.css",
+    "frontend/styles/travels.css",
+    "frontend/javascript/index.js",
+    "frontend/javascript/travels.js",
+  ],
+  format: "esm"
 }
 
 build(outputFolder, esbuildOptions)

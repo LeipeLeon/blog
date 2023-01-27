@@ -37,3 +37,10 @@ content_engine: "resource"
 collections:
   posts:
     permalink:  /posts/:year/:month/:slug.*
+  travels:
+    permalink:  /travels/:year/:month/:slug.*
+    output: true
+
+available_locales: [en, nl]
+default_locale: en
+prefix_default_locale: false
