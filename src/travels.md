@@ -1,6 +1,7 @@
 ---
 layout: travels/post
 title: Travels
+sitemap: false
 ---
 
 {% rendercontent "travels/item", heading: "List of travel posts"%}
