@@ -97,3 +97,9 @@ sl-avatar {
 img {
   max-width: 100%;
 }
+
+blockquote {
+  border-left: 3px solid #bbb;
+  padding-left: 1em;
+  margin-left: 0px;
+}
