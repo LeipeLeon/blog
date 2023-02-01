@@ -19,6 +19,7 @@ CLEAN=${CLEAN//[^a-zA-Z0-9_]/}
 # finally, lowercase with TR
 CLEAN=`echo -n $CLEAN | tr A-Z a-z`
 
+mkdir -p "${BASE_DIR}/${CURRENT_DATE}"
 FILENAME="${BASE_DIR}/${CURRENT_DATE}/${CLEAN}.md"
 
 echo "---" > ${FILENAME}
