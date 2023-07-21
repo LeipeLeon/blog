@@ -27,7 +27,7 @@ echo "title:  \"${@}\"" >> ${FILENAME}
 echo "date:   ${CURRENT_TIME}" >> ${FILENAME}
 echo "---" >> ${FILENAME}
 
-# Open t
+# Open Sosurcetree
 /usr/local/bin/stree .
 # open in VSCode
 /usr/local/bin/code .
