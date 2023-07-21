@@ -87,4 +87,5 @@ Voila! A one liner log:
 core-rails-1 | [17] 127.0.0.1 - - [21/Jul/2023:09:43:25 +0200] "GET /health_check HTTP/1.1" 200 - 0.0041
 ```
 
-
+See: https://gist.github.com/sharshenov/33c0dd55c838ecd5762c
+See: https://stackoverflow.com/questions/25771030/force-ssl-in-production-rb-how-to-override-in-controller-to-just-be-http
