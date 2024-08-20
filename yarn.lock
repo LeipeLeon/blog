@@ -318,10 +318,10 @@ braces@^3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-bridgetown-lit-renderer@2.0.0-beta3:
-  version "2.0.0-beta3"
-  resolved "https://registry.yarnpkg.com/bridgetown-lit-renderer/-/bridgetown-lit-renderer-2.0.0-beta3.tgz#ad9dc9859eab72d27d2e7e866b48961952df090a"
-  integrity sha512-7Xhn/uNBxXVXjEWSp9IwXla7iQldhraSZD7ihgvdyC1i3shohVLWof26P5ICP8y4+lrR0T7mY0NiKnZ1RPypVw==
+bridgetown-lit-renderer@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/bridgetown-lit-renderer/-/bridgetown-lit-renderer-2.0.0.tgz#2a50e1afa56ab4a27a789a420ce8d2f513afede9"
+  integrity sha512-x4aoX2Mk5EZX3wGUMmRdF1XZDAlXoUqPBTquUAZ4eFQbuglRq3UDiucsEk5Kz+4+djCc05VxkK33lNe+Rp9lXQ==
   dependencies:
     "@lit-labs/ssr" "^2.1.0"
     "@webcomponents/template-shadowroot" "^0.1.0"
