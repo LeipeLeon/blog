@@ -32,7 +32,7 @@ gem "bridgetown", "~> 1.2.0"
 # (you can optionally limit this to the "development" group)
 gem "puma", "~> 5.6"
 
-gem "bridgetown-lit-renderer", "= 2.0.0.beta3"
+gem "bridgetown-lit-renderer", "= 2.0.0"
 gem "bridgetown-feed", "~> 2.1"
 gem "bridgetown-sitemap", "~> 1.1"
 
