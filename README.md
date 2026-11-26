@@ -21,13 +21,13 @@ Welcome to your new Bridgetown website! You can update this README file to provi
   - `gem install bridgetown -N`
 - [Node](https://nodejs.org)
   - `>= 12`
-- [Yarn](https://yarnpkg.com)
+- [npm](https://www.npmjs.com) (bundled with Node)
 
 ## Install
 
 ```sh
 cd bridgetown-site-folder
-bundle install && yarn install
+bundle install && npm install
 ```
 > Learn more: [Bridgetown Getting Started Documentation](https://www.bridgetownrb.com/docs/).
 
