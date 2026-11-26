@@ -47,7 +47,7 @@ jobs:
         run: bin/bridgetown deploy
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
           path: output/
@@ -63,7 +63,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
 
   notify:
     runs-on: ubuntu-latest
