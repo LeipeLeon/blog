@@ -9,21 +9,21 @@
     "esbuild-dev": "npm run shoelace:copy-assets && node esbuild.config.js --watch"
   },
   "devDependencies": {
-    "@ruby2js/esbuild-plugin": "^0.0.3",
-    "cssnano": "^5.1.14",
+    "@ruby2js/esbuild-plugin": "0.0.3",
+    "cssnano": "^9.9.0",
     "esbuild": "^0.28.2",
-    "postcss": "^8.4.12",
-    "postcss-color-mod-function": "^3.0.3",
+    "postcss": "^8.5.33",
+    "postcss-color-mod-function": "^4.1.1",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-import": "^14.1.0",
+    "postcss-import": "^17.0.1",
     "postcss-load-config": "^6.0.1",
-    "postcss-mixins": "^9.0.4",
-    "postcss-preset-env": "^7.4.3",
+    "postcss-mixins": "^12.1.2",
+    "postcss-preset-env": "^11.6.3",
     "read-cache": "^1.0.2"
   },
   "dependencies": {
-    "@hotwired/turbo": "^7.2.4",
-    "@shoelace-style/shoelace": "^2.0.0-beta.88",
+    "@hotwired/turbo": "^8.0.23",
+    "@shoelace-style/shoelace": "^2.20.1",
     "bridgetown-lit-renderer": "3.0.0",
     "esbuild-plugin-lit-css": "^4.1.2",
     "lit": "^3.3.3"
