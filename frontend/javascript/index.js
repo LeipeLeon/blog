@@ -1,5 +1,5 @@
-import "index.css"
-import "syntax-highlighting.css"
+import "$styles/index.css"
+import "$styles/syntax-highlighting.css"
 import * as Turbo from "@hotwired/turbo"
 import "bridgetown-lit-renderer"
 
@@ -25,6 +25,6 @@ setBasePath("/shoelace-assets")
 // Import all JavaScript & CSS files from src/_components
 // To opt into `.global.css` & `.lit.css` nomenclature, change the `css` extension below to `global.css`.
 // Read https://edge.bridgetownrb.com/docs/components/lit#sidecar-css-files for documentation.
-import components from "bridgetownComponents/**/*.{js,jsx,js.rb,css}"
+import components from "$components/**/*.{js,jsx,js.rb,css}"
 
 console.info("Bridgetown is loaded!")

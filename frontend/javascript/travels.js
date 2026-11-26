@@ -1,1 +1,1 @@
-import "travels.css"
+import "$styles/travels.css"

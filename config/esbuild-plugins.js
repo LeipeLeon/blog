@@ -3,19 +3,21 @@
 // any additional configuration to the `plugins` array below.
 
 // This plugin will let you import `.lit.css` files as sidecar stylesheets.
-// Read https://edge.bridgetownrb.com/docs/components/lit#sidecar-css-files for documentation.
-const { litCssPlugin } = require("esbuild-plugin-lit-css")
-const postCssConfig = require("postcss-load-config").sync()
-const postCssProcessor = require("postcss")([...postCssConfig.plugins])
+// Read https://www.bridgetownrb.com/docs/components/lit#sidecar-css-files for documentation.
+import { litCssPlugin } from "esbuild-plugin-lit-css"
+import postcss from "postcss"
 
-module.exports = {
-  plugins: [
-    litCssPlugin({
-      filter: /\.lit\.css$/,
-      transform: async (css, { filePath }) => {
-        const results = await postCssProcessor.process(css, { ...postCssConfig.options, from: filePath })
-        return results.css
-      }
-    }),
-  ]
-}
+const postcssrc = (await import("postcss-load-config")).default
+
+export const plugins = [
+  litCssPlugin({
+    filter: /\.lit\.css$/,
+    transform: async (css, { filePath }) => {
+      const postCssConfig = await postcssrc()
+      const postCssProcessor = postcss([...postCssConfig.plugins])
+
+      const results = await postCssProcessor.process(css, { ...postCssConfig.options, from: filePath })
+      return results.css
+    }
+  }),
+]

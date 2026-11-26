@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   plugins: {
     'postcss-mixins': {},
     'postcss-color-mod-function': {
